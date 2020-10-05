@@ -15,7 +15,7 @@ const tigerchen = new Tier('Tigerchen', "Katze", 3);
 tigerchen.log(); // "Tigerchen", "Katze", 3
 
 
-// Prototypische Vererbung
+// Pseudoklassische Vererbung
 class Tier {
   constructor(name, typ, alter) {
     this.name = name;
