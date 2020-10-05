@@ -46,3 +46,8 @@ const tigerchen = new Katze("Tigerchen", 25, "Schwarz");
 tigerchen.bewegen(); // Tigerchen hat sich 1m bewegt!
 tigerchen.miau(); // Miau
 tigerchen.log(); // Tigerchen 25 Katze Schwarz
+
+
+
+
+//Todo Mixin
