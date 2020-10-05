@@ -50,4 +50,26 @@ tigerchen.log(); // Tigerchen 25 Katze Schwarz
 
 
 
-//Todo Mixin
+
+//Mixin-Pattern
+class Tier {
+  constructor(name, alter) {
+    this.name = name;
+    this.alter = alter;
+  }
+  atmen() {
+    console.log(this.name + ' hat geatmet');
+  }
+}
+// Klasse welche von übergebener Klasse abgeleitet wird und methode fliegen enthält
+const LuftMixin = (superclass) => class extends superclass {
+  fliegen() {
+    console.log(this.name + " ist geflogen");
+  }
+}
+class LuftTier extends LuftMixin(Tier) {
+}
+// Aufruf
+const vogelu = new LuftTier('vogelu', 3);
+vogelu.atmen();
+vogelu.fliegen();
