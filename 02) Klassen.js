@@ -1,4 +1,4 @@
-// Einfaches Basis-Beispiel
+/////////////////////////////////////////////////////////////// Einfaches Basis-Beispiel
 // Objekterzeugung durch Klassen-Syntax [ES05]
 class Tier {
   constructor(name, typ, alter) {
@@ -19,7 +19,7 @@ tigerchen.log(); // "Tigerchen", "Katze", 3
 
 
 
-// Vererbung
+/////////////////////////////////////////////////////////////// Vererbung
 class Tier {
   constructor(name, alter) {
     this.name = name;
@@ -51,7 +51,7 @@ tigerchen.log(); // Tigerchen 25 Katze Schwarz
 
 
 
-//Mixin-Pattern
+/////////////////////////////////////////////////////////////// Mixin-Pattern
 class Tier {
   constructor(name, alter) {
     this.name = name;
