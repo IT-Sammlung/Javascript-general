@@ -17,25 +17,32 @@ tigerchen.log(); // "Tigerchen", "Katze", 3
 
 
 
-// Pseudoklassische Vererbung
-// Definiere Klasse Tier
-function Tier(name, alter) {
+
+
+// Vererbung
+class Tier {
+  constructor(name, alter) {
     this.name = name;
     this.alter = alter;
+  }
+  bewegen() {
+    console.log(this.name + ' hat sich 1m bewegt!')
+  }
 }
-// Definiere unterklasse von Tier
-function Katze(name, farbe, alter) {
-  Tier.call(this, name, alter);
-  this.typ = 'Katze';
-  this.farbe = farbe;
+class Katze extends Tier {
+  constructor(name, alter, farbe) {
+    super(name, alter);
+    this.typ = "Katze";
+    this.farbe = farbe;
+  }
+  miau() {
+    console.log("Miau");
+  }
+  log() {
+    console.log(this.name,this.alter,this.typ,this.farbe);
+  }
 }
-// Erweitere Tier Klasse
-Tier.prototype.log = function() {
-  console.log(this.name,this.typ,this.farbe,this.alter);
-}
-// Bindung
-Katze.prototype = new Tier();
-Katze.prototype.constructor = Katze;
-// Aufruf
-const tigerchen = new Katze('Tigerchen', 3, "Schwarz");
-tigerchen.log(); // "Tigerchen", "Katze", 3, "Schwarz";
+const tigerchen = new Katze("Tigerchen", 25, "Schwarz");
+tigerchen.bewegen(); // Tigerchen hat sich 1m bewegt!
+tigerchen.miau(); // Miau
+tigerchen.log(); // Tigerchen 25 Katze Schwarz
