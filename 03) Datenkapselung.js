@@ -7,7 +7,7 @@ class Tier {
   }
 }
 const tigerli = new Tier('Tigerli', 18);
-console.log(tigerli.name); // undefined <-- von aussen kann nicht auf die private Eigenschaft zugegriffen werden
+console.log(tigerli._name); // undefined <-- von aussen kann nicht auf die private Eigenschaft zugegriffen werden
 
 
 
